@@ -1,0 +1,5 @@
+LIBRARY PhyDll
+EXPORTS
+		Mass
+		Weight
+		PersonWeight

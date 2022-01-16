@@ -1,0 +1,7 @@
+LIBRARY MathDEFDll
+EXPORTS 
+		FirstSide
+		SecondSide
+		ThirdSide
+		TriangleIs
+		AngleIs

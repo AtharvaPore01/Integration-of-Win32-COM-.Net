@@ -1,0 +1,10 @@
+LIBRARY ChemDEFDll
+EXPORTS
+		HeatEngineWD
+		HeatEngineEff
+
+		RefrigeratorQ1
+		RefrigeratorCoP
+
+		AirConditionerQ2
+		AirConditionerCoP
