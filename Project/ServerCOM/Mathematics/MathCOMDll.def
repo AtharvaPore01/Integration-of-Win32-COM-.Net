@@ -1,4 +1,0 @@
-LIBRARY MathCOMDll
-EXPORTS
-		DllGetClassObject	PRIVATE
-		DllCanUnloadNow		PRIVATE
