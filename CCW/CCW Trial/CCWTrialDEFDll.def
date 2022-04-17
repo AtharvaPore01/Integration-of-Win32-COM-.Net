@@ -1,0 +1,4 @@
+LIBRARY CCWTrialDEFDll
+EXPORTS
+		Multiply
+

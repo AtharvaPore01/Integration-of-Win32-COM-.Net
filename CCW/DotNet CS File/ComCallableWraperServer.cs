@@ -1,0 +1,40 @@
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace ManagedServerForInterop
+{
+    //Define IMath Interface
+    public interface IMathematics
+    {
+        int MultiplicationValue { get; set; }
+        int DivisionValue { get; set; }
+        int MultiplicationOfTwoIntegers(int num1, int num2);
+        int DivisionOfTwoIntegers(int num1, int num2);
+    }
+
+	[ClassInterface(ClassInterfaceType.None)]
+	public class Math: IMathematics
+    {
+		public int MultiplicationValue { get; set; }
+		public int DivisionValue { get; set; }
+
+		public Math()
+        {
+			//empty
+        }
+
+		public int MultiplicationOfTwoIntegers(int num1, int num2)
+        {
+            MultiplicationValue = num1 * num2;
+            MessageBox.Show("Multiplication of 2 Integers: " + MultiplicationValue);
+            return (MultiplicationValue);
+        }
+
+		public int DivisionOfTwoIntegers(int num1, int num2)
+        {
+            DivisionValue = num1 / num2;
+            MessageBox.Show("Division of 2 Integers: " + DivisionValue);
+            return (DivisionValue);
+        }
+    }
+}

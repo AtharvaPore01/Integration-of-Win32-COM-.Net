@@ -1,0 +1,63 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.14.26433.0 (45831dd6).
+//
+// c:\myvisualstudio2017projects\04_com\05_comcallablewraper\client\atharva.tlh
+//
+// C++ source equivalent of Win32 type library atharva.tlb
+// compiler-generated file created 11/18/18 at 21:10:39 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("fa8ad6b8-79a2-3846-89b7-e0ea2062c8e9"))
+/* LIBID */ __ComCallableWraperServer;
+struct __declspec(uuid("da5f296a-2ccd-3e3f-80be-fc65df8e3d20"))
+/* dual interface */ IMathematics;
+struct /* coclass */ Math;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IMathematics, __uuidof(IMathematics));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("da5f296a-2ccd-3e3f-80be-fc65df8e3d20"))
+IMathematics : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_MultiplicationValue (
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_MultiplicationValue (
+        /*[in]*/ long pRetVal ) = 0;
+      virtual HRESULT __stdcall get_DivisionValue (
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_DivisionValue (
+        /*[in]*/ long pRetVal ) = 0;
+      virtual HRESULT __stdcall MultiplicationOfTwoIntegers (
+        /*[in]*/ long num1,
+        /*[in]*/ long num2,
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall DivisionOfTwoIntegers (
+        /*[in]*/ long num1,
+        /*[in]*/ long num2,
+        /*[out,retval]*/ long * pRetVal ) = 0;
+};
+
+struct __declspec(uuid("c3dda530-b1f3-3164-847e-54562c99765a"))
+Math;
+    // interface _Object
+    // [ default ] interface IMathematics
+
+#pragma pack(pop)

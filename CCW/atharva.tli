@@ -1,0 +1,50 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.14.26433.0 (b1972629).
+//
+// c:\myvisualstudio2017projects\04_com\05_comcallablewraper\client\atharva.tli
+//
+// Wrapper implementations for Win32 type library atharva.tlb
+// compiler-generated file created 11/18/18 at 21:09:46 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IMathematics wrapper method implementations
+//
+
+inline long IMathematics::GetMultiplicationValue ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MultiplicationValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMathematics::PutMultiplicationValue ( long pRetVal ) {
+    HRESULT _hr = put_MultiplicationValue(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMathematics::GetDivisionValue ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DivisionValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMathematics::PutDivisionValue ( long pRetVal ) {
+    HRESULT _hr = put_DivisionValue(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMathematics::MultiplicationOfTwoIntegers ( long num1, long num2 ) {
+    long _result = 0;
+    HRESULT _hr = raw_MultiplicationOfTwoIntegers(num1, num2, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMathematics::DivisionOfTwoIntegers ( long num1, long num2 ) {
+    long _result = 0;
+    HRESULT _hr = raw_DivisionOfTwoIntegers(num1, num2, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}

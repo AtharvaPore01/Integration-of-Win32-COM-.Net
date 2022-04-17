@@ -1,0 +1,49 @@
+***********************************************************************************************************************************************************************
+							ClientOfAggregationComponentWithRegFile
+***********************************************************************************************************************************************************************
+
+1. This Folder Contains 2 Sub-Folders one is "ClientOfAggregationComponentWithRegFile"(Project Directory(PD)) and "Debug"(Debug Directory(DD)).
+2. PD Contains:
+	ClientOfAggregationComponentWithRegFile.cpp
+	HeaderForClientOfAggregationComponentWithRegFile.h (It is a combination of "ontainmentOuterComponentWithRegFile.h" & "AggregationInnerComponentWithRegFile.h")
+3. DD Contain:
+	ClientOfAggregationComponentWithRegFile.exe
+
+***********************************************************************************************************************************************************************
+							AggregationInnerComponentWithRegFile
+***********************************************************************************************************************************************************************
+1. This Folder Contains 2 Sub-Folders one is "AggregationInnerComponentWithRegFile"(Project Directory(PD)) and "Debug"(Debug Directory(DD)).
+2. PD Contains:
+	AggregationInnerComponentWithRegFile.cpp
+	AggregationInnerComponentWithRegFile.def
+	AggregationInnerComponentWithRegFile.h (Which we have to give to Outer's Dll)
+3. DD Contains:
+	AggregationInnerComponentWithRegFile.dll ****(copy this Dll to C:\Windows\SysWOW64\)
+	AggregationInnerComponentWithRegFile.lib
+***********************************************************************************************************************************************************************
+							AggregationOuterComponentWithRegFile
+***********************************************************************************************************************************************************************
+1. This Folder Contains 2 Sub-Folders one is "ContainmentOuterComponentWithRegFile"(Project Directory(PD)) and "Debug"(Debug Directory(DD)).
+2. PD Contains:
+	AggregationInnerComponentWithRegFile.h (From Inner)
+	AggregationOuterComponentWithRegFile.cpp
+	AggregationOuterComponentWithRegFile.def
+	AggregationOuterComponentWithRegFile.h (Outer's Header File)
+	AggregationOuterComponentWithRegFile.reg
+3. DD Contains:
+	AggregationOuterComponentWithRegFile.dll ****(copy this Dll to C:\Windows\SysWOW64\)
+	AggregationOuterComponentWithRegFile.lib
+***********************************************************************************************************************************************************************
+							For Developer User
+***********************************************************************************************************************************************************************
+1. STRICTLY Do change the CLSIDs of classes and IIDs of all Interfaces.
+2. Copy that Changed CLSID to the reg file properly.
+	tip - Developer must copy the CLSID's Stringised Representation.
+3. After Successful creation reg file and after copying both dlls (AggregationOuterComponentWithRegFile.dll and AggregationInnerComponentWithRegFile.dll) 
+   in aforementioned path DOUBLE CLICK on that reg file.
+4. ***IMPORTANT REGARDING REG FILE : 
+	Reg will contain:
+		- 2 CLSID one of inner class's and one of outer's class
+		- 2 Different paths of 2 dlls (e.g "C:\\Windows\\SysWOW64\\filename1.dll" and "C:\\Windows\\SysWOW64\\filename2.dll").
+		- Reg file for both dll is SAME.
+

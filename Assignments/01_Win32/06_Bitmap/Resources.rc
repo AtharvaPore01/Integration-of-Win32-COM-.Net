@@ -1,0 +1,2 @@
+#include "MyResources.h"
+MYBITMAP BITMAP "Bitmap.bmp"

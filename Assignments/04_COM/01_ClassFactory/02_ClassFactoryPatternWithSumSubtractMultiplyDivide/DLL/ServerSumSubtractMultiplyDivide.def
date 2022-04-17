@@ -1,0 +1,4 @@
+LIBRARY ServerSumSubtractMultiplyDivide
+EXPORTS
+		DllGetClassObject	PRIVATE
+		DllCanUnloadNow		PRIVATE

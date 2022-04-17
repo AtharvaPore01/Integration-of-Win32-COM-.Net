@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{F82D77FE-539D-492E-B40C-64880029AE0C}]
+@="MyMathDll"
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{F82D77FE-539D-492E-B40C-64880029AE0C}\InprocServer32]
+@="C:\\Windows\\SysWOW64\\ServerSumSubtractMultiplyDivide.dll"
